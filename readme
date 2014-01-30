@@ -1,0 +1,23 @@
+In my program i am using Expectimax Search ..
+
+Initially I find all the possible states with reference to the given input upto depth of 2 level
+After finding all the states i defined an evaluation function such that the maximum of all the states is my best state.
+Evaluation Function:
+	Paramaters Used:
+		a)No of blots of white(i.e  my checkers)
+		b)no of blots of opponent checkers
+		c)no of anchors of white which are on the opponents homeboard
+		d)no of anchors of white which are present anywhere(i.e. outside home board)
+		e)anchors of white on 18 and 20
+		f)pipcount of the stage
+		
+	Now my evaluation function is as follows
+	
+	  eval=.025*(anchor_white-anchor_black)+0.02525*(black_blot-white_blot)+.025*(barb-barw)-0.0025*pip;
+
+
+
+ 
+Additional Features:
+	2)All the checkers condition are satisfied.
+	3)Combination of 2 strategies are used i.e. we are making our evaluation function on the basis of the time i.e. is the game on the verge of completion or it is in the mid stage.
